@@ -54,7 +54,6 @@ DEALINGS IN THE SOFTWARE.
 #define ID_PIN_P14          (DEVICE_ID_IO_P0 + 14)
 #define ID_PIN_LED_RED      (DEVICE_ID_IO_P0 + 15)
 #define ID_PIN_LED_BLUE     (DEVICE_ID_IO_P0 + 16)
-#define ID_PIN_BUZZER       (DEVICE_ID_IO_P0 + 17)
 #define ID_PIN_P18          (DEVICE_ID_IO_P0 + 18)
 #define ID_PIN_P19          (DEVICE_ID_IO_P0 + 19)
 #define ID_PIN_P20          (DEVICE_ID_IO_P0 + 20)
@@ -92,7 +91,6 @@ namespace codal
             ZPin        ledGreen;
             ZPin        ledBlue;
             ZPin        ledRed;
-            ZPin        buzzer;
             ZPin        interrupt;
             ZPin        servoOne;
             ZPin        servoTwo;
