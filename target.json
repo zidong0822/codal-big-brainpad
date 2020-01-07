@@ -38,13 +38,13 @@
     "libraries":[
         {
             "name":"codal-core",
-            "url":"https://github.com/lancaster-university/codal-core",
+            "url":"https://github.com/zidong0822/codal-core",
             "branch":"master",
             "type":"git"
         },
         {
             "name":"codal-stm32",
-            "url":"https://github.com/lancaster-university/codal-stm32",
+            "url":"https://github.com/zidong0822/codal-stm32",
             "branch":"master",
             "type":"git"
         }

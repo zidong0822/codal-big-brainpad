@@ -32,16 +32,16 @@
     "generate_hex": true, 
     "libraries": [
         {
-            "branch": "f0f38593ffacdbaa901efb62ec7658cb16c75828", 
+            "branch": "master", 
             "name": "codal-core", 
             "type": "git", 
-            "url": "https://github.com/lancaster-university/codal-core"
+            "url": "https://github.com/zidong0822/codal-core"
         }, 
         {
-            "branch": "e6ab968ee7ef2d3e4c61142bbf27ec64927d947e", 
+            "branch": "master", 
             "name": "codal-stm32", 
             "type": "git", 
-            "url": "https://github.com/lancaster-university/codal-stm32"
+            "url": "https://github.com/zidong0822/codal-stm32"
         }
     ], 
     "linker_flags": "-Wl,--no-wchar-size-warning -Wl,--gc-sections -mcpu=cortex-m4 -mthumb", 
