@@ -36,7 +36,7 @@ int main()
     int state = 0;
     memset(txBuffer, 0x88, txSize - 1);
 
-    codal::Pin led_mosi(ID_PIN_BUTTON_LEFT, PB_8, PIN_CAPABILITY_DIGITAL);
+    codal::Pin led_mosi(ID_2812, PB_8, PIN_CAPABILITY_DIGITAL);
     codal::Pin *led_miso = NULL;
     codal::Pin *led_sclk = NULL;
     ZSPI led(led_mosi, *led_miso, *led_sclk);

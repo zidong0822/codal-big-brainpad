@@ -47,7 +47,7 @@ DEALINGS IN THE SOFTWARE.
 #define ID_PIN_P7           (DEVICE_ID_IO_P0 + 7)
 #define ID_PIN_LED_GREEN    (DEVICE_ID_IO_P0 + 8)
 #define ID_PIN_SCL          (DEVICE_ID_IO_P0 + 9)
-#define ID_PIN_SDA          (DEVICE_ID_IO_P0 + 10)
+#define ID_LED              (DEVICE_ID_IO_P0 + 10)
 #define ID_PIN_P11          (DEVICE_ID_IO_P0 + 11)
 #define ID_PIN_P12          (DEVICE_ID_IO_P0 + 12)
 #define ID_PIN_P13          (DEVICE_ID_IO_P0 + 13)
@@ -67,7 +67,7 @@ DEALINGS IN THE SOFTWARE.
 #define ID_PIN_INT          (DEVICE_ID_IO_P0 + 27)
 #define ID_PIN_BUTTON_UP    (DEVICE_ID_IO_P0 + 28)
 #define ID_PIN_BUTTON_DOWN  (DEVICE_ID_IO_P0 + 29)
-#define ID_PIN_BUTTON_LEFT  (DEVICE_ID_IO_P0 + 30)
+#define ID_2812             (DEVICE_ID_IO_P0 + 30)
 #define ID_PIN_BUTTON_RIGHT (DEVICE_ID_IO_P0 + 31)
 #define ID_PIN_TEMP_SENSOR  (DEVICE_ID_IO_P0 + 32)
 #define ID_PIN_LIGHT_SENSOR (DEVICE_ID_IO_P0 + 33)
@@ -96,6 +96,7 @@ namespace codal
             ZPin        interrupt;
             ZPin        servoOne;
             ZPin        servoTwo;
+            ZPin        led;
 
             ZPin        snd;
             ZPin        hpEn;
