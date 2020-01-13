@@ -42,6 +42,7 @@ using namespace codal;
   */
 BrainPadIO::BrainPadIO() :
     scl (ID_PIN_SCL, PB_6, PIN_CAPABILITY_AD),
+    sda (ID_PIN_SDA, PB_7, PIN_CAPABILITY_AD),
     buttonUp (ID_PIN_BUTTON_UP, PA_5, PIN_CAPABILITY_DIGITAL),
     buttonDown (ID_PIN_BUTTON_DOWN, PB_10, PIN_CAPABILITY_DIGITAL),
     buttonRight (ID_PIN_BUTTON_RIGHT, PC_13, PIN_CAPABILITY_DIGITAL),
