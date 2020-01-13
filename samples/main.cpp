@@ -17,7 +17,7 @@ int main()
 
     while(1)
     {
-        spi->transfer(ZERO_FRAME, sizeof(ZERO_FRAME), NULL, 0);
+        led->transfer(ZERO_FRAME, sizeof(ZERO_FRAME), NULL, 0);
         bp.io.ledRed.setDigitalValue(state);
         fiber_sleep(1000);
         state = !state;
