@@ -123,20 +123,20 @@ int BrainPad::init()
     spi.setFrequency(3200000);
     uint8_t mask = 0x03;
     int index = 1 * 12;
-    txBuffer[index] = buf_bytes[green >> 6 & mask];
-    txBuffer[index + 1] = buf_bytes[green >> 4 & mask];
-    txBuffer[index + 2] = buf_bytes[green >> 2 & mask];
-    txBuffer[index + 3] = buf_bytes[green & mask];
+    txBuffer[index] = buf_bytes[255 >> 6 & mask];
+    txBuffer[index + 1] = buf_bytes[255 >> 4 & mask];
+    txBuffer[index + 2] = buf_bytes[255 >> 2 & mask];
+    txBuffer[index + 3] = buf_bytes[255 & mask];
 
-    txBuffer[index + 4] = buf_bytes[red >> 6 & mask];
-    txBuffer[index + 5] = buf_bytes[red >> 4 & mask];
-    txBuffer[index + 6] = buf_bytes[red >> 2 & mask];
-    txBuffer[index + 7] = buf_bytes[red & mask];
+    txBuffer[index + 4] = buf_bytes[0 >> 6 & mask];
+    txBuffer[index + 5] = buf_bytes[0 >> 4 & mask];
+    txBuffer[index + 6] = buf_bytes[0 >> 2 & mask];
+    txBuffer[index + 7] = buf_bytes[0 & mask];
 
-    txBuffer[index + 8] = buf_bytes[blue >> 6 & mask];
-    txBuffer[index + 9] = buf_bytes[blue >> 4 & mask];
-    txBuffer[index + 10] = buf_bytes[blue >> 2 & mask];
-    txBuffer[index + 11] = buf_bytes[blue & mask];
+    txBuffer[index + 8] = buf_bytes[0 >> 6 & mask];
+    txBuffer[index + 9] = buf_bytes[0 >> 4 & mask];
+    txBuffer[index + 10] = buf_bytes[0 >> 2 & mask];
+    txBuffer[index + 11] = buf_bytes[0 & mask];
     spi.transfer(txBuffer, txSize, NULL, 0);
 
     return DEVICE_OK;
