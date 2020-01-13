@@ -77,4 +77,3 @@ BrainPadIO::BrainPadIO() :
     d7(ID_PIN_P0 + 23, PB_7, PIN_CAPABILITY_AD)
 {
 }
-}
