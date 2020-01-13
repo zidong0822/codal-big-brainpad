@@ -96,7 +96,6 @@ namespace codal
             ZPin        interrupt;
             ZPin        servoOne;
             ZPin        servoTwo;
-            ZPin        led;
 
             ZPin        snd;
             ZPin        hpEn;
