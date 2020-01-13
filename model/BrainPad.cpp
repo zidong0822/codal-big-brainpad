@@ -121,7 +121,7 @@ int BrainPad::init()
 
     memset(txBuffer, 0x88, txSize - 1);
     spi.setFrequency(3200000);
-    show(1, 255, 0, 0, led);
+    show(1, 255, 0, 0, spi);
 
     return DEVICE_OK;
 }
