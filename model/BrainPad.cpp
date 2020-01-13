@@ -30,6 +30,9 @@ using namespace codal;
 
 static BrainPad *device_instance = NULL;
 
+uint8_t buf_bytes[] = {0x88, 0x8E, 0xE8, 0xEE};
+uint8_t txBuffer[8*3*4 + 1];
+uint32_t txSize = 8*3*4 + 1;
 /**
   * Constructor.
   *
@@ -116,6 +119,10 @@ int BrainPad::init()
     //io.snd1.setAnalogValue(500);
 
 
+    memset(txBuffer, 0x88, txSize - 1);
+    spi.setFrequency(3200000);
+    show(1, 255, 0, 0, led);
+
     return DEVICE_OK;
 }
 
@@ -127,6 +134,31 @@ int BrainPad::init()
 void BrainPad::idleCallback()
 {
     codal_dmesg_flush();
+}
+
+
+void show(int id, uint8_t red, uint8_t green, uint8_t blue, ZSPI &led) {
+
+    if (id < 8) {
+        uint8_t mask = 0x03;
+        int index = id * 12;
+        txBuffer[index] = buf_bytes[green >> 6 & mask];
+        txBuffer[index + 1] = buf_bytes[green >> 4 & mask];
+        txBuffer[index + 2] = buf_bytes[green >> 2 & mask];
+        txBuffer[index + 3] = buf_bytes[green & mask];
+
+        txBuffer[index + 4] = buf_bytes[red >> 6 & mask];
+        txBuffer[index + 5] = buf_bytes[red >> 4 & mask];
+        txBuffer[index + 6] = buf_bytes[red >> 2 & mask];
+        txBuffer[index + 7] = buf_bytes[red & mask];
+
+        txBuffer[index + 8] = buf_bytes[blue >> 6 & mask];
+        txBuffer[index + 9] = buf_bytes[blue >> 4 & mask];
+        txBuffer[index + 10] = buf_bytes[blue >> 2 & mask];
+        txBuffer[index + 11] = buf_bytes[blue & mask];
+    }
+
+    led.transfer(txBuffer, txSize, NULL, 0);
 }
 
 void brainpad_dmesg_flush()
