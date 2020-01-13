@@ -47,7 +47,7 @@ DEALINGS IN THE SOFTWARE.
 #define ID_PIN_P7           (DEVICE_ID_IO_P0 + 7)
 #define ID_PIN_LED_GREEN    (DEVICE_ID_IO_P0 + 8)
 #define ID_PIN_SCL          (DEVICE_ID_IO_P0 + 9)
-#define ID_LED              (DEVICE_ID_IO_P0 + 10)
+#define ID_PIN_SDA          (DEVICE_ID_IO_P0 + 10)
 #define ID_PIN_P11          (DEVICE_ID_IO_P0 + 11)
 #define ID_PIN_P12          (DEVICE_ID_IO_P0 + 12)
 #define ID_PIN_P13          (DEVICE_ID_IO_P0 + 13)
